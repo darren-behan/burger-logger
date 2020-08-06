@@ -1,4 +1,10 @@
 <li>
-  <span class="label" data-id="{{id}}" data-newburger="{{devoured}}"><strong>ID:</strong></span> {{this.id}}
-  <span class="label" data-id="{{id}}" data-newburger="{{devoured}}"><strong>Burger:</strong></span> {{this.name}}
+  {{this.name}}
+
+  {{#unless devoured}}
+    <button class="devour" data-id="{{id}}" data-newsleep="{{devoured}}">
+      DEVOUR!
+    </button>
+  {{/unless}}
+  
 </li>
