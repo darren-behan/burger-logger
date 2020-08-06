@@ -1,21 +1,23 @@
-<h1>Burgers!</h1>
+<h1>Eat-Da-Burger!</h1>
 
-<h2>Burgers that are not devoured!</h2>
-
+<h2>Burgers ready to eat!</h2>
+<!-- Pass in data from server.js -->
 <ul>
   {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
+    {{#unless devoured }}
+      {{> burgers/burger-block devoured=false }}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burgers that are ready to be eaten!</h2>
+<button class="devour" data-id="{{this.id}}">DEVOUR!</button>
 
+<h2>Burgers devoured!</h2>
+<!-- Pass in data from server.js -->
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      {{> burgers/burger-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
@@ -24,15 +26,11 @@
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Burger Name:</label>
+    <label for="ca">Burger Name:</label>  
     <input type="text" id="ca" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="hungry">Hungry?</label><br>
-    <input type="radio" name="hungry" value="1" checked> Hungry!<br>
-    <input type="radio" name="hungry" value="0"> Full
-  </div>
-
   <button type="submit">Add burger</button>
+
+  <p>Enter a burger you want to eat - Click 'Add burger' when you're done!</p>
 </form>
