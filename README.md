@@ -1,5 +1,3 @@
-# burger-logger
-
 ![Code Count](https://img.shields.io/github/languages/count/darren-behan/burger-logger) ![Main Code Base](https://img.shields.io/github/languages/top/darren-behan/burger-logger) ![License Badge](https://img.shields.io/badge/license-none-blue) ![Version Badge](https://img.shields.io/badge/version-1.0-red) ![Last Commit](https://img.shields.io/github/last-commit/darren-behan/burger-logger) ![Open Issues](https://img.shields.io/github/issues-raw/darren-behan/burger-logger) ![Repo Size](https://img.shields.io/github/repo-size/darren-behan/burger-logger)
 
 # Welcome to Burger Logger 👋
