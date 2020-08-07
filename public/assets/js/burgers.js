@@ -20,20 +20,25 @@ $(function() {
   });
 
   $(".devour").on("click", function(event) {
-    var id = $(this).data("id");
-    var newSleep = $(this).data("newsleep");
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+    
+    const id = $(this).data("id");
+    const newBurger = $(this).data("newburger");
 
-    var newSleepState = {
-      sleepy: newSleep
+    console.log("I've been clicked - " + id + " " + newBurger);
+
+    let newBurgerState = {
+      devoured: newBurger
     };
 
     // Send the PUT request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newSleepState
+      data: newBurgerState
     }).then(
       function() {
-        console.log("changed sleep to", newSleep);
+        console.log("changed burger to", newBurger);
         // Reload the page to get the updated list
         location.reload();
       }

@@ -1,10 +1,10 @@
 <li>
   {{this.name}}
 
-  {{#unless devoured}}
-    <button class="devour" data-id="{{id}}" data-newsleep="{{devoured}}">
+  {{#if devoured}}
+    <button class="devour" data-id="{{id}}" data-newburger="{{devoured}}">
       DEVOUR!
     </button>
-  {{/unless}}
+  {{/if}}
   
 </li>

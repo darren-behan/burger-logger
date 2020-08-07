@@ -56,7 +56,7 @@ const orm = {
 
     console.log(queryString);
     console.log(vals);
-    vals[1] = false;
+    vals[1] = true;
     connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
@@ -66,10 +66,13 @@ const orm = {
     });
   },
   update: function(table, objColVals, condition, cb) {
-    const queryString = "UPDATE " + table;
+    console.log(table);
+    console.log(objColVals);
+    console.log(condition);
 
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
+    let queryString = "UPDATE " + table;
+
+    queryString += " SET devoured = false";
     queryString += " WHERE ";
     queryString += condition;
 
