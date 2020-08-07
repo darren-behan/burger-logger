@@ -1,17 +1,28 @@
+html body {
+  background-color: rgb(255, 198, 92);
+  color: #000000;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(58, 139, 58);
+}
+
 li {
-  padding: 5px;
+  padding: 15px;
   margin: 5px;
-  background: #faebd7;
+  background-color: #ffffff;
 }
 
-.label {
-  font-weight: bold;
+.devour {
+ margin: 0vh 3vw 0vh 3vw;
+ padding: 0vh 1vw 0vh 1vw;
 }
 
-.create-update-form {
+.create-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
+  text-align: center;
 }
 
 .form-group {

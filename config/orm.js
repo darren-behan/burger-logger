@@ -45,6 +45,7 @@ const orm = {
     });
   },
   create: function(table, cols, vals, cb) {
+    vals[1] = false;
     let queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -63,6 +64,7 @@ const orm = {
     });
   },
   update: function(table, condition, cb) {
+    console.log(condition);
 
     let queryString = "UPDATE " + table;
 
