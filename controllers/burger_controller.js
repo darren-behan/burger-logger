@@ -19,7 +19,6 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  console.log("burger_controller.js called via POST");
   burger.create([
     "name", "devoured"
   ], [

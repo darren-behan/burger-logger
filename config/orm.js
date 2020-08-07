@@ -54,9 +54,6 @@ const orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log(queryString);
-    console.log(vals);
-    vals[1] = true;
     connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
@@ -65,14 +62,11 @@ const orm = {
       cb(result);
     });
   },
-  update: function(table, objColVals, condition, cb) {
-    console.log(table);
-    console.log(objColVals);
-    console.log(condition);
+  update: function(table, condition, cb) {
 
     let queryString = "UPDATE " + table;
 
-    queryString += " SET devoured = false";
+    queryString += " SET devoured = true";
     queryString += " WHERE ";
     queryString += condition;
 

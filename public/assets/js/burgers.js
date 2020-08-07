@@ -26,8 +26,6 @@ $(function() {
     const id = $(this).data("id");
     const newBurger = $(this).data("newburger");
 
-    console.log("I've been clicked - " + id + " " + newBurger);
-
     let newBurgerState = {
       devoured: newBurger
     };

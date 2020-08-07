@@ -1,10 +1,10 @@
 <li>
   {{this.name}}
 
-  {{#if devoured}}
+  {{#unless devoured}}
     <button class="devour" data-id="{{id}}" data-newburger="{{devoured}}">
       DEVOUR!
     </button>
-  {{/if}}
+  {{/unless}}
   
 </li>
