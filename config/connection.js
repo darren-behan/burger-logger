@@ -1,22 +1,26 @@
 // Set up MySQL connection.
 const mysql = require("mysql");
 require("dotenv").config();
+const connection;
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);;
+} else {
+  // create the connection information for the sql database
+  connection = mysql.createConnection({
+    host: process.env.DB_HOST,
 
-// create the connection information for the sql database
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
+    // Set the port of our application
+    // process.env.PORT lets the port be set by Heroku
+    port: process.env.DB_PORT,
 
-  // Set the port of our application
-  // process.env.PORT lets the port be set by Heroku
-  port: process.env.DB_PORT,
+    // Your username
+    user: process.env.DB_USERNAME,
 
-  // Your username
-  user: process.env.DB_USERNAME,
-
-  // Your password
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
+    // Your password
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  });
+}
 
 // Make connection.
 connection.connect(function(err) {
