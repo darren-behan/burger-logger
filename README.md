@@ -27,7 +27,7 @@
 
 View live demo <a href="https://enigmatic-cove-34274.herokuapp.com">here</a>
 
-![Preview](./public/assets/img/burger-logger.png "Preview of Burger Logger App")
+![Preview](./public/assets/img/burger-logger-v1.png "Preview of Burger Logger App")
 
 ## License
 
