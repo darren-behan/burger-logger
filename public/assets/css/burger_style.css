@@ -3,7 +3,13 @@ html body {
   color: #000000;
 }
 
-h1 {
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h2 {
   text-align: center;
   color: rgb(58, 139, 58);
 }
@@ -11,7 +17,9 @@ h1 {
 li {
   padding: 15px;
   margin: 5px;
-  background-color: #ffffff;
+  background-color: rgb(255, 198, 92);
+  font-size: 2em;
+  text-align: center;
 }
 
 .devour {
@@ -27,4 +35,8 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+
+.form-control {
+  text-align: center;
 }

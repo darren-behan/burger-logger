@@ -1,9 +1,15 @@
 <div class="container">
+
   <h1>Eat-Da-Burger!</h1>
+
+  <div class="image">
+    <img src="/assets/img/hamburger2.png">
+  </div>
 
   <div class="container">
     <div class="row">
       <div class="col">
+        <h2>Burgers to eat!</h2>
         <!-- Pass in data from server.js -->
         <ol>
           {{#each burgers}}
@@ -14,6 +20,7 @@
         </ol>
       </div>
       <div class="col">
+        <h2>Devoured Burgers!</h2>
         <!-- Pass in data from server.js -->
         <ol>
           {{#each burgers}}
@@ -31,10 +38,10 @@
       <div class="col">
         <form class="create-form">
           <div class="form-group"> 
-            <input type="text" id="ca" name="name">
+            <input class="form-control" type="text" id="ca" name="name" placeholder="Enter a burger you want to eat - Click 'Submit' when you're done!">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
-          <p>Enter a burger you want to eat - Click 'Submit' when you're done!</p>
+          {{!-- <p>Enter a burger you want to eat - Click 'Submit' when you're done!</p> --}}
         </form>
       </div>
     </div>
